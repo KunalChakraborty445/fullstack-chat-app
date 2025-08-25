@@ -4,7 +4,8 @@
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+     "build": "cd Frontend && npm install && npm run build"
   },
   "author": "",
   "type": "module",
