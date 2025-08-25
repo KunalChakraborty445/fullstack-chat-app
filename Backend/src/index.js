@@ -29,11 +29,14 @@ app.use("/api/messages",messageRoutes)
 
 
 if (process.env.NODE_ENV === "production") {
-    server.listen(PORT, () =>{
-        console.log(`Server is running on port ${PORT}`);
-        connectDB();
+    app.use(express.static(path.join(__dirname, "../../Frontend/dist")));
+
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../../Frontend", "dist", "index.html"));
     })
-   
 }
 
-export default server;
+server.listen(PORT, () =>{
+    console.log(`Server is running on port ${PORT}`);
+    connectDB();
+})
