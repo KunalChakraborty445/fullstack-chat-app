@@ -54,7 +54,9 @@
 <a href="https://fullstack-chat-vibechat.onrender.com">
 VibeChat
 </a>
+
 ---
+
 ## ⚙️ Installation
 
 Clone the repository:
